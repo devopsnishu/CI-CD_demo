@@ -2,8 +2,6 @@ FROM node:latest
 
 WORKDIR /usr/src/app
 
-RUN npm install
-
 COPY . .
 
 EXPOSE 8000
