@@ -32,3 +32,9 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      -
+         name: SonarQube Scan
+         uses: sonarsource/sonarqube-scan-action@master
+         with:
+           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}  
