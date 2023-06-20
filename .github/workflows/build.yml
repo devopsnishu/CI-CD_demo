@@ -1,14 +1,9 @@
+name: Sonarqube
+
 on:
- Sonarcloud
   push:
-    branches:
-      - main
-      - master
-      - develop
-      - 'releases/**'
+    branches: main
 
-
-name: Main Workflow
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
